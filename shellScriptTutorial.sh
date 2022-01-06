@@ -8,6 +8,7 @@ echo hello world.
 FIRSTNAME="Mike"
 LASTNAME="Peterson"
 COMPUTER_ANSWER="Anna"
+COMPUTER_ANSWER_TWO="Jack"
 
 # echo out variable 'FIRSTNAME'
 echo "My firstname is $FIRSTNAME."
@@ -25,6 +26,9 @@ read -p "Please enter your name: " NAME
 if [ "$NAME" == "$COMPUTER_ANSWER" ]
 then 
 	echo "I guessed your name correctly. My answers: $COMPUTER_ANSWER."
-else   
+elif [ "$NAME" == "$COMPUTER_ANSWER_TWO" ]
+then
+	echo "My second guess was correct. $COMPUTER_ANSWER_TWO"
+else	
 	echo "I guessed your name incorrectly. My answer: $COMPUTER_ANSWER. "
 fi       	
