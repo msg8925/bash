@@ -20,3 +20,8 @@ read -p "Please enter your name: " NAME
 # print user input 
 echo "Your name is $NAME."
 
+# simple if condition
+if [ "$NAME" == "Anna" ]
+then 
+	echo "I guessed your name correctly $NAME"
+fi       	
