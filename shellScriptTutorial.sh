@@ -5,30 +5,39 @@
 echo hello world.
 
 # variables
-FIRSTNAME="Mike"
-LASTNAME="Peterson"
-COMPUTER_ANSWER="Anna"
-COMPUTER_ANSWER_TWO="Jack"
+#FIRSTNAME="Mike"
+#LASTNAME="Peterson"
+#COMPUTER_ANSWER="Anna"
+#COMPUTER_ANSWER_TWO="Jack"
+NUM1=""
+NUM2=""
 
 # echo out variable 'FIRSTNAME'
-echo "My firstname is $FIRSTNAME."
+#echo "My firstname is $FIRSTNAME."
 
 # echo out variable 'LASTNAME' (alternate syntax)
-echo "My lastname is ${LASTNAME}"
+#echo "My lastname is ${LASTNAME}"
 
 # get input from command line
-read -p "Please enter your name: " NAME
+read -p "Please enter first number: " NUM1
 
 # print user input 
-#echo "Your name is $NAME."
+read -p "Please enter second number: " NUM2
 
 # simple if else condition
-if [ "$NAME" == "$COMPUTER_ANSWER" ]
-then 
-	echo "I guessed your name correctly. My answers: $COMPUTER_ANSWER."
-elif [ "$NAME" == "$COMPUTER_ANSWER_TWO" ]
+#if [ "$NAME" == "$COMPUTER_ANSWER" ]
+#then 
+#	echo "I guessed your name correctly. My answers: $COMPUTER_ANSWER."
+#elif [ "$NAME" == "$COMPUTER_ANSWER_TWO" ]
+#then
+#	echo "My second guess was correct. $COMPUTER_ANSWER_TWO"
+#else	
+#	echo "I guessed your name incorrectly. My answer: $COMPUTER_ANSWER. "
+#fi
+
+if [ "$NUM1" -gt "$NUM2" ]
 then
-	echo "My second guess was correct. $COMPUTER_ANSWER_TWO"
+	echo "$NUM1 is greater than $NUM2"
 else	
-	echo "I guessed your name incorrectly. My answer: $COMPUTER_ANSWER. "
-fi       	
+	echo "$NUM2 is greater than $NUM1"
+fi	
