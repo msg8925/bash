@@ -91,9 +91,17 @@
 #done				
 
 #While loop - read through a file line by line
-LINE=1
-while read -r CURRENT_LINE
-	do
-		echo "$LINE: $CURRENT_LINE"
-		((LINE++))
-done < "./new-1.txt"		
+#LINE=1
+#while read -r CURRENT_LINE
+#	do
+#		echo "$LINE: $CURRENT_LINE"
+#		((LINE++))
+#done < "./new-1.txt"
+
+
+#function with params
+function greet(){
+	echo "Hello, I am $1 and I am $2"
+}
+
+greet "Brad" "36"
