@@ -82,11 +82,18 @@
 
 #for loop to rename files
 #execute command 'touch 1.txt 2.txt 3.txt'on command line before running this script
-FILES=$(ls *.txt)
-NEW="new"
-for FILE in $FILES
-	do
-		echo "Renaming $FILE to new-$FILE"
-		mv $FILE $NEW-$FILE
-done				
+#FILES=$(ls *.txt)
+#NEW="new"
+#for FILE in $FILES
+#	do
+#		echo "Renaming $FILE to new-$FILE"
+#		mv $FILE $NEW-$FILE
+#done				
 
+#While loop - read through a file line by line
+LINE=1
+while read -r CURRENT_LINE
+	do
+		echo "$LINE: $CURRENT_LINE"
+		((LINE++))
+done < "./new-1.txt"		
