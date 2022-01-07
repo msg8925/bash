@@ -100,8 +100,14 @@
 
 
 #function with params
-function greet(){
-	echo "Hello, I am $1 and I am $2"
-}
+#function greet(){
+#	echo "Hello, I am $1 and I am $2"
+#}
 
-greet "Brad" "36"
+#greet "Brad" "36"
+
+# create a folder and write to a file
+mkdir hello
+touch "hello/world.txt"
+echo "Hello World" >> "hello/world.txt"
+echo "Created hello/world.txt"
