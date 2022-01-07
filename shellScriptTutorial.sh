@@ -59,19 +59,26 @@
 #fi
 
 #get a value from the user (-p means prompt)
-read -p "Are you 21 or over? Y/N: " USER_INPUT
+#read -p "Are you 21 or over? Y/N: " USER_INPUT
 
 #case statement 
-case "$USER_INPUT" in
-	[yY] | [yY][eE][sS])
-		echo "You can have a beer."
-		;;
-	[nN] | [nN][oO])
-		echo "Sorry, no beer for you."	
-		;;
-       *)
-		echo "Please enter y/yes or n/no"      
-esac
+#case "$USER_INPUT" in
+#	[yY] | [yY][eE][sS])
+#		echo "You can have a beer."
+#		;;
+#	[nN] | [nN][oO])
+#		echo "Sorry, no beer for you."	
+#		;;
+#       *)
+#		echo "Please enter y/yes or n/no"      
+#esac
+
+#simple for loop
+NAMES="BRAD KEVIN ALICE MARK"
+for NAME in $NAMES
+	do
+		echo "Hello $NAME"
+	done		
 
 
 

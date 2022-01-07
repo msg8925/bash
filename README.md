@@ -1,3 +1,5 @@
-# bash
+# bash scripting 
 
-Hello again.
+# This file demonstrates basic bash scripting 
+
+
