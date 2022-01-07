@@ -11,7 +11,7 @@
 #COMPUTER_ANSWER_TWO="Jack"
 #NUM1=""
 #NUM2=""
-FILE="text.txt"
+#FILE="text.txt"
 
 # echo out variable 'FIRSTNAME'
 #echo "My firstname is $FIRSTNAME."
@@ -44,17 +44,34 @@ FILE="text.txt"
 #fi
 
 #Create a file called "text.txt" and place in the same directory as this .exe
-if [ -e "$FILE" ]
-then
-	echo "$FILE exists."
-else
-	echo "$FILE does not exist."
-fi	
+#if [ -e "$FILE" ]
+#then
+#	echo "$FILE exists."
+#else
+#	echo "$FILE does not exist."
+#fi	
 
-if [ -f "$FILE" ]
-then
-	echo "$FILE is a file."
-else
-	echo "$FILE is not a file."		
-fi
+#if [ -f "$FILE" ]
+#then
+#	echo "$FILE is a file."
+#else
+#	echo "$FILE is not a file."		
+#fi
+
+#get a value from the user (-p means prompt)
+read -p "Are you 21 or over? Y/N: " USER_INPUT
+
+#case statement 
+case "$USER_INPUT" in
+	[yY] | [yY][eE][sS])
+		echo "You can have a beer."
+		;;
+	[nN] | [nN][oO])
+		echo "Sorry, no beer for you."	
+		;;
+       *)
+		echo "Please enter y/yes or n/no"      
+esac
+
+
 
