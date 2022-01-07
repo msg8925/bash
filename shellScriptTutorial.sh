@@ -74,11 +74,19 @@
 #esac
 
 #simple for loop
-NAMES="BRAD KEVIN ALICE MARK"
-for NAME in $NAMES
+#NAMES="BRAD KEVIN ALICE MARK"
+#for NAME in $NAMES
+#	do
+#		echo "Hello $NAME"
+#	done		
+
+#for loop to rename files
+#execute command 'touch 1.txt 2.txt 3.txt'on command line before running this script
+FILES=$(ls *.txt)
+NEW="new"
+for FILE in $FILES
 	do
-		echo "Hello $NAME"
-	done		
-
-
+		echo "Renaming $FILE to new-$FILE"
+		mv $FILE $NEW-$FILE
+done				
 
